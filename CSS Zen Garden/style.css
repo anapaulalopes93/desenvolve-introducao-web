@@ -2,6 +2,8 @@ body {
     background-color: #F7F4E4;
     font-family: sans-serif;
     margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
 }
 
 p {
@@ -41,4 +43,46 @@ h3 {
 
 abbr {
     font-variant: small-caps;
+}
+
+.intro{
+    height: 550px;
+}
+
+#design-archives {
+    display: none;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+header h1, header h2 {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+footer a {
+    border: 2px solid #fff;
+    padding: 0.5em;
+    display: inline-block;
 }
