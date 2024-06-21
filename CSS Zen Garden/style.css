@@ -73,6 +73,7 @@ nav ul {
 nav li {
     margin-bottom: 1em;
     text-align: center;
+    border-top: 1px solid #ccc;
 }
 
 footer {
@@ -130,4 +131,29 @@ footer a {
 
 .benefits + .participation {
     border-top: none;
+}
+
+a {
+    color: #00698f;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #003366;
+}
+
+a:visited {
+    font-weight: normal;
+}
+
+.main p:first-child:first-letter {
+    font-size: 300%;
+    font-family: 'Playfair Display', serif;
+    float: left;
+    padding: 0.2em;
+    background-color: #f7f7f7;
+}
+
+nav li:last-child {
+    border-bottom: 1px solid #ccc;
 }
