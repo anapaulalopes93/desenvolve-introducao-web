@@ -86,3 +86,48 @@ footer a {
     padding: 0.5em;
     display: inline-block;
 }
+
+.main footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main footer a {
+    flex: 1;
+    margin: 0 1em;
+}
+
+.benefits {
+    display: flex;
+}
+
+.benefits .text {
+    flex: 7;
+}
+
+.benefits .title{
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.participation .item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.benefits, .participation {
+    border-top: 1px solid #ccc;
+    border-bottom: 1 px solid #ccc;
+}
+
+.benefits + .participation {
+    border-top: none;
+}
