@@ -10,10 +10,6 @@ p {
     text-indent: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333333;
-}
-
 h1 {
     font-size: 1.8rem;
     text-align: center;
@@ -29,7 +25,7 @@ h3 {
     text-align: center;
 }
 
-.destaque {
+.highlight {
     color: #8BC34A;
 }
 
@@ -37,7 +33,7 @@ h3 {
     text-align: right;
 }
 
-.main{
+.main {
     line-height: 1.5;
 }
 
@@ -45,7 +41,7 @@ abbr {
     font-variant: small-caps;
 }
 
-.intro{
+.intro {
     height: 550px;
 }
 
@@ -156,4 +152,37 @@ a:visited {
 
 nav li:last-child {
     border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: static;
+    }
+
+    .main {
+        border-left: none;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    header {
+        height: auto;
+    }
+
+    p {
+        text-indent: 0;
+    }
+}
+
+@media print {
+    body {
+        font-family: 'Times', serif;
+    }
+
+    .banner {
+        background-color: #fff;
+        color: #333;
+    }
 }
