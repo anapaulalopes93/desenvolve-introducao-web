@@ -1,9 +1,20 @@
 body {
-    background-color: #F7F4E4;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.highlight {
+    color: #8bc34a;
+}
+
+body {
     font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     margin: 0 auto;
-    width: 80%;
     max-width: 1280px;
+    padding: 0 20px;
+    width: 80%;
 }
 
 p {
@@ -17,16 +28,12 @@ h1 {
 
 h2 {
     font-size: 1.4rem;
-    text-align: right;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.2rem;
     text-align: center;
-}
-
-.highlight {
-    color: #8BC34A;
 }
 
 .summary {
@@ -41,47 +48,141 @@ abbr {
     font-variant: small-caps;
 }
 
+.page-wrapper {
+    position: relative;
+}
+
+.page {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .intro {
     height: 550px;
 }
 
-#design-archives {
-    display: none;
-}
-
 header {
     background-color: #333;
-    color: #fff;
-    padding: 1em;
+    color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
 }
 
-header h1, header h2 {
-    display: inline-block;
-    margin-right: 1em;
+header h1 {
+    margin-left: 1em;
 }
 
-nav ul {
+.nav {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute;
+    top: 560px;
+    left: 62%;
+    width: 38%;
+    padding: 20px;
+    border: 1px solid #1f295c;
+    border-left: none;
+    margin-left: 2%;
 }
 
-nav li {
+.nav li {
     margin-bottom: 1em;
     text-align: center;
-    border-top: 1px solid #ccc;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #8bc34a;
+    font-weight: bold;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
-    padding: 1em;
+    color: #f7f7f7;
+    text-align: center;
+    margin-bottom: 4%;
 }
 
 footer a {
-    border: 2px solid #fff;
+    text-decoration: none;
+    color: #8bc34a;
+    font-weight: bold;
+    border: 2px solid #8bc34a;
     padding: 0.5em;
-    display: inline-block;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 10px;
+}
+
+.benefits {
+display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.benefits.text {
+    width: 70%;
+}
+
+.benefits.title {
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.participation.item {
+    width: 50%;
+    margin: 10px;
+}
+
+.participation.title {
+    text-align: center;
+    vertical-align: middle;
+}
+
+a {
+    color: #8bc34a;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #666;
+}
+
+a:visited {
+    font-weight: normal;
+}
+
+.main p:first-child:first-letter {
+    font-size: 3em;
+    font-family: 'Times New Roman', serif;
+    float: left;
+    margin-right: 10px;
+}
+
+.nav li {
+    border-top: 1px solid #ccc;
+}
+
+.nav li:last-child {
+    border-bottom: 1px solid #ccc;
 }
 
 .main footer {
@@ -95,82 +196,23 @@ footer a {
     margin: 0 1em;
 }
 
-.benefits {
-    display: flex;
-}
-
-.benefits .text {
-    flex: 7;
-}
-
-.benefits .title{
-    flex: 3;
-    display: flex;
-    align-items: center;
-}
-
-.participation {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.participation .item {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.benefits, .participation {
-    border-top: 1px solid #ccc;
-    border-bottom: 1 px solid #ccc;
-}
-
-.benefits + .participation {
-    border-top: none;
-}
-
-a {
-    color: #00698f;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #003366;
-}
-
-a:visited {
-    font-weight: normal;
-}
-
-.main p:first-child:first-letter {
-    font-size: 300%;
-    font-family: 'Playfair Display', serif;
-    float: left;
-    padding: 0.2em;
-    background-color: #f7f7f7;
-}
-
-nav li:last-child {
-    border-bottom: 1px solid #ccc;
-}
-
-@media (max-width: 768px) {
-    nav {
+@media only screen and (max-width: 768px) {
+   .nav {
         position: static;
     }
-
-    .main {
-        border-left: none;
+    
+   .page {
+        border: none;
     }
-
-    .main {
+    
+   .flex-container {
         flex-direction: column;
     }
-
-    header {
+    
+   .intro {
         height: auto;
     }
-
+    
     p {
         text-indent: 0;
     }
@@ -178,11 +220,11 @@ nav li:last-child {
 
 @media print {
     body {
-        font-family: 'Times', serif;
+        font-family: 'Times New Roman', serif;
     }
-
-    .banner {
-        background-color: #fff;
+    
+    header {
+        background-color: #f7f7f7;
         color: #333;
     }
 }
